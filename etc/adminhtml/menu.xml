@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="M2E_Mirakl::mirakl" title="Mirakl" module="M2E_Mirakl" sortOrder="31"
+             dependsOnModule="M2E_Mirakl" resource="M2E_Mirakl::mirakl" action="m2e_mirakl/dashboard/index"/>
+    </menu>
+</config>

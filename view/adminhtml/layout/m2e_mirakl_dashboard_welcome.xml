@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      layout="admin-1column"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="M2E\Mirakl\Block\Adminhtml\Welcome"
+                   name="m2e_mirakl.welcome"
+                   template="M2E_Mirakl::welcome.phtml">
+                <block class="Magento\Integration\Block\Adminhtml\Integration\Activate\Permissions\Tab\Webapi"
+                       name="m2e_mirakl.webapi"
+                       template="Magento_Integration::integration/activate/permissions/tab/webapi.phtml"/>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

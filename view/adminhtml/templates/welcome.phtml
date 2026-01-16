@@ -1,0 +1,51 @@
+<?php
+
+/** @var \M2E\Mirakl\Block\Adminhtml\Welcome $block */
+?>
+<div class="m2e-mirakl-welcome-page">
+    <p>
+        <?= /* @noEscape */
+        __('Easily connect your Magento 2 (Adobe Commerce) store with the Mirakl marketplace using M2E integration'
+            . ' solution.') ?>
+    </p>
+    <p><?= /* @noEscape */
+        __('With M2E Mirakl Connect, you can:') ?></p>
+    <ul>
+        <li><?= /* @noEscape */
+            __('Synchronize your product catalog with Mirakl in just a few clicks.') ?></li>
+        <li><?= /* @noEscape */
+            __('Manage inventory, pricing, and product details directly from your Magento admin panel.') ?></li>
+        <li><?= /* @noEscape */
+            __('Automatically process and track orders across both platforms.') ?></li>
+        <li><?= /* @noEscape */
+            __('Enjoy a streamlined experience with continuous, reliable updates.') ?></li>
+    </ul>
+
+    <h2><?= /* @noEscape */
+        __('Before You Begin') ?></h2>
+    <p><?= /* @noEscape */
+        __('To ensure smooth operation and complete functionality, the integration requires permission to access'
+            . ' specific resources within your Magento 2 store. This access allows the system to sync data accurately'
+            . ' and manage communication between your store and Mirakl.') ?></p>
+
+    <h2><?= /* @noEscape */
+        __('Important') ?></h2>
+    <p><?= /* @noEscape */
+        __('By proceeding, you grant the necessary access to enable this integration. Your data is handled securely'
+            . ' and in full compliance with modern security and confidentiality standards.') ?></p>
+    <p><?= /* @noEscape */
+        __('Once confirmed, you’ll be ready to take full advantage of everything M2E Mirakl Connect has to offer.') ?></p>
+    <p><b><?= /* @noEscape */
+            __('Click "Confirm" to continue.') ?></b></p>
+
+    <?= /* @noEscape */
+    $block->getChildHtml('m2e_mirakl.webapi') ?>
+
+    <form action="<?= /* @noEscape */
+    $block->getSubmitUrl(); ?>" method="POST" class="form-inline">
+        <?= $block->getBlockHtml('formkey') ?>
+        <button type='submit' class="action-primary scalable"><?= /* @noEscape */
+            __('Confirm') ?></button>
+    </form>
+
+</div>

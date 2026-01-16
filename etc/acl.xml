@@ -1,0 +1,13 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="M2E_Mirakl::mirakl" title="Mirakl Integration" sortOrder="31">
+                    <resource id="M2E_Mirakl::dashboard" title="Dashboard" sortOrder="10" />
+                    <resource id="M2E_Mirakl::config" title="Configs" sortOrder="20" />
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

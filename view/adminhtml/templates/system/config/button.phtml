@@ -1,0 +1,50 @@
+<?php
+/** @var \M2E\Mirakl\Block\Adminhtml\System\Button $block */
+?>
+<div class="m2e-cloud-reset-installation">
+    <?php
+    if ($block->isAllowedReset()) {
+        echo $block->getButtonHtml();
+    } else {
+        /* @noEscape */
+        echo '<p class="response success">' . __('System is running as expected. No reset required.') . '</p>';
+    }
+    ?>
+</div>
+
+<script>
+    require(['jquery', 'mage/translate'], function ($, $t) {
+        var $btn = $('#reset_install_btn');
+        $btn.on('click', function () {
+            var url = '<?= /* @noEscape */ $block->getAjaxUrl() ?>';
+            var formKey = $('input[name="form_key"]').val();
+
+            $.ajax({
+                showLoader: true,
+                url: url,
+                type: 'POST',
+                data: {form_key: formKey},
+                success: function (response) {
+                    if (response.success) {
+                        $btn.prop('disabled', true);
+                        addMessage(response);
+                    } else {
+                        addMessage(response);
+                    }
+                },
+                error: function () {
+                    const error = {success: true, message: $t('Something went wrong.')};
+                    addMessage(error);
+                }
+            });
+        });
+
+        function addMessage(response) {
+            $btn.siblings('.response').remove();
+            var $msg = $('<p/>', {
+                'class': 'response ' + (response.success ? 'success' : 'error')
+            }).text(response.message);
+            $btn.after($msg);
+        }
+    });
+</script>

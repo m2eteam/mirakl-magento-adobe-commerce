@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="m2e_cloud_mirakl" translate="label" sortOrder="460" class="m2e-tab-cloud-mirakl">
+            <label>M2E MIRAKL CONNECT</label>
+        </tab>
+
+        <section id="m2e_mirakl" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Module</label>
+            <tab>m2e_cloud_mirakl</tab>
+            <resource>Magento_Config::config</resource>
+
+            <group id="general" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Mirakl Connector</label>
+
+                <field id="version" translate="label" type="button" sortOrder="100" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Current version</label>
+                    <frontend_model>M2E\Mirakl\Block\Adminhtml\System\Version</frontend_model>
+                </field>
+                <field id="reset" translate="label" type="button" sortOrder="110" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Reset Connection</label>
+                    <frontend_model>M2E\Mirakl\Block\Adminhtml\System\Button</frontend_model>
+                </field>
+            </group>
+
+        </section>
+
+        <section id="m2e">
+            <class>separator-top</class>
+            <label>Mirakl</label>
+            <tab>m2e_cloud</tab>
+            <resource>Magento_Config::config</resource>
+
+            <group id="mirakl" translate="label" type="text" sortOrder="450" showInDefault="0" showInWebsite="0" showInStore="0">
+                <field id="installed" translate="label" type="select" sortOrder="10" showInDefault="0" showInWebsite="0" showInStore="0">
+                    <label>Installed</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="init_host" translate="label" type="text" sortOrder="10" showInDefault="0" showInWebsite="0" showInStore="0">
+                    <label>Init Host</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

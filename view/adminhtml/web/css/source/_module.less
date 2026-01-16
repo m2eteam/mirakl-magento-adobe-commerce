@@ -1,0 +1,33 @@
+@m2e-mirakl-icons-admin__font-name-path: 'M2E_Mirakl::fonts/mirakl-icons';
+@m2e-mirakl-icons-admin__font-name: 'm2e-mirakl';
+
+.lib-font-face(
+  @family-name: @m2e-mirakl-icons-admin__font-name,
+  @font-path: @m2e-mirakl-icons-admin__font-name-path,
+  @font-weight: normal,
+  @font-style: normal
+);
+
+.admin__menu .item-mirakl.parent.level-0 > a:before,
+.admin__menu .item-mirakl.level-0 > a:before {
+  font-family: @m2e-mirakl-icons-admin__font-name;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  line-height: 25px;
+  content: "\e800";
+}
+
+.m2e-mirakl-welcome-page{
+    h2, form{
+        margin-top: 50px;
+    }
+    ul li{
+        list-style-position: inside;
+    }
+    form button{
+        font-size: 1.6rem;
+        letter-spacing: 0.025em;
+        padding-bottom: 0.6875em;
+        padding-top: 0.6875em;
+    }
+}

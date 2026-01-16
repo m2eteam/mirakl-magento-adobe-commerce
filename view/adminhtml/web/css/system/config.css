@@ -1,0 +1,22 @@
+.config-nav-block. strong {
+    display: flex;
+    align-items: center;
+}
+
+.config-nav-block.m2e-tab-cloud-mirakl strong:before {
+    background: url(../../images/m2e-adobe-mirakl.png) no-repeat;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    content: '';
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.m2e-cloud-reset-installation .response.success {
+    color: green;
+}
+.m2e-cloud-reset-installation .response.error {
+    color: red;
+}
