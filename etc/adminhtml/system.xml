@@ -30,7 +30,7 @@
         <section id="m2e">
             <class>separator-top</class>
             <label>Mirakl</label>
-            <tab>m2e_cloud</tab>
+            <tab>m2e_cloud_mirakl</tab>
             <resource>Magento_Config::config</resource>
 
             <group id="mirakl" translate="label" type="text" sortOrder="450" showInDefault="0" showInWebsite="0" showInStore="0">
