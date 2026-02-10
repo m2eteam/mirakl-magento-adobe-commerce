@@ -2,7 +2,7 @@
     "name" : "m2e/mirakl-magento-adobe-commerce",
     "description" : "Start selling on Mirakl with M2E Mirakl Connect. This native Adobe Commerce extension lets you add and categorize Magento products on Mirakl while efficiently managing orders and inventory",
     "type" : "magento2-module",
-    "version" : "1.0.1",
+    "version" : "1.0.2",
     "license" : "proprietary",
     "keywords" : [
         "magento",
@@ -17,7 +17,7 @@
     "homepage" : "https://m2epro.com/mirakl-magento-adobe-commerce",
     "require" : {
         "php" : ">=7.4",
-        "m2e/m2ecloud-magento-adobe-commerce-connector": "^2"
+        "m2e/m2ecloud-magento-adobe-commerce-connector": "^2.0.1"
     },
     "autoload" : {
         "files" : [
