@@ -5,7 +5,7 @@
     <type name="M2E\M2ECloudMagentoConnector\Model\ModuleInfoProvider">
         <arguments>
             <argument name="extensionList" xsi:type="array">
-                <item name="m2e_mirakl" xsi:type="object">\M2E\Mirakl\Model\Extension</item>
+                <item name="m2e_mirakl" xsi:type="object">M2E\Mirakl\Model\Extension</item>
             </argument>
         </arguments>
     </type>
